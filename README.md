@@ -1,2 +1,2 @@
 # Rothello
-ROS + othello = Rothello
+ROSでオセロ
