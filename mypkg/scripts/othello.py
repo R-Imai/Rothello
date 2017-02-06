@@ -4,6 +4,8 @@ import sys
 import codecs
 import re
 
+import numpy as np
+
 sys.stdout = codecs.getwriter('utf_8')(sys.stdout)
 
 class othello:
@@ -173,6 +175,19 @@ class othello:
 		if self.is_finish():
 			return 10
 		return 0
+
+def board_str2arr(board_str):
+	board_str = board_str.replace(" a  b  c  d  e  f  g  h","").replace("|", "").replace("\n", "")
+	for i in range(1, 9):
+		board_str = board_str.replace(str(i), "")
+	board_str = board_str.replace("◎", "0")
+	board_str = board_str.replace("　", "1")
+	board_str = board_str.replace("●", "2")
+	arr = np.array(map(int, list(board_str))) - 1
+	arr = arr.reshape(8,8)
+	return arr
+
+	
 
 def main():
 	model = othello()
