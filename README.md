@@ -30,3 +30,6 @@ $ #ここからは打ちたい盤面の記号をスペースを入れて打つ(�
 "your turn"と表示されたらあなたの番です
 
 これを用いてコンピュータのノードも作成可能
+
+## 動画URL
+https://www.youtube.com/watch?v=ohsN5KnglkI
